@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html
+	lang="en"
+	data-bs-theme="auto"
+>
+	<head>		<meta charset="utf-8">
+
+		<title>
+		
+		sfizz 0.5.0 release -
+		
+		Test
+		</title>
+
+		
+		<meta name="author" content="redtide">
+		
+		<meta name="web-author" content="redtide">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script src="../../../assets/js/color-modes.js"></script>
+
+		
+		<link rel="shortcut icon" href="../../../assets/ico/favicon.ico">
+		<!-- Stylesheets -->
+		<link href="../../../assets/css/style.min.css" rel="stylesheet" media="screen">		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/github.min.css"
+			disabled="disabled"
+			id="hljs_light"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/github-dark.min.css"
+			disabled="disabled"
+			id="hljs_dark"
+		/>
+	</head>
+	<body>
+		<button onclick="topFunction()" id="scrollButton" title="Go to top">Top</button>
+		<div class="container">			<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+				<symbol id="sun-fill" viewBox="0 0 16 16">
+					<path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+				</symbol>
+				<symbol id="moon-stars-fill" viewBox="0 0 16 16">
+					<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+					<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+				</symbol>
+				<symbol id="circle-half" viewBox="0 0 16 16">
+					<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+				</symbol>
+				<symbol id="check2" viewBox="0 0 16 16">
+					<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+				</symbol>
+			</svg>
+
+			<nav
+				class="navbar navbar-expand-lg bg-dark text-bg-dark"
+				data-bs-theme="dark"
+			>
+				<div class="container">
+
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarContent"
+						aria-controls="navbarContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<a
+						class="navbar-brand"
+						href="../../.."
+						>
+							<img
+								src="../../../assets/ico/favicon.ico"
+								width="30" height="30" class="d-inline-block align-top" alt=""
+							>
+						Test
+					</a>
+
+					<div class="collapse navbar-collapse" id="navbarContent">
+						<ul class="navbar-nav me-auto mt-2 mt-lg-0">
+							<li>
+								<a class="nav-link" href="../..">News</a>
+							</li>
+						</ul>
+						<ul class="navbar-nav">
+							<li class="nav-item">
+									<a
+										href="#"
+										class="nav-link"
+										data-bs-toggle="modal"
+										data-bs-target="#mkdocs_search_modal">
+											<i class="fa fa-search"></i> Search
+									</a>
+							</li>
+							<li class="nav-item dropdown">
+								<button
+									class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
+									id="bd-theme"
+									type="button"
+									aria-expanded="false"
+									data-bs-toggle="dropdown"
+									data-bs-display="static"
+									aria-label="Toggle theme (auto)">
+									<svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
+									<span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+								</button>
+								<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+									<li>
+										<button
+											type="button"
+											class="dropdown-item d-flex align-items-center"
+											data-bs-theme-value="light"
+											aria-pressed="false">
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#sun-fill"></use></svg>
+											Light
+											<svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+										</button>
+									</li>
+									<li>
+										<button
+											type="button"
+											class="dropdown-item d-flex align-items-center"
+											data-bs-theme-value="dark"
+											aria-pressed="false">
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#moon-stars-fill"></use></svg>
+											Dark
+											<svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+										</button>
+									</li>
+									<li>
+										<button
+											type="button"
+											class="dropdown-item d-flex align-items-center active"
+											data-bs-theme-value="auto"
+											aria-pressed="true">
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half"></use></svg>
+											Auto
+											<svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+										</button>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="row mt-4" id="content">
+				<div class="col-md-9">
+					<article><h1>sfizz 0.5.0 release</h1><p>Published by redtide at 2020-10-15 20:11:56</p>
+<hr />
+<p>Big stuff:</p>
+<ul>
+<li>Added basic support for Flex EGs (#388) as modulation sources (targets to come)</li>
+<li>Added basic support for LFOs (#338)  as modulation sources (targets to come)</li>
+<li>EGs and LFOs can now target EQs and filters (#424)</li>
+<li>A new GUI has been added and is common to the LV2 and VST plugin (#397 #404 #419 #489 #492 #495 #496 #497); still mostly work in progress, more to come!</li>
+<li>Provided build systems to use sfizz with the VCV-Rack SDK and the DISTRHO Plugin Framework</li>
+</ul>
+<p>New features:</p>
+<ul>
+<li>Added support for <code>sustain_lo</code> (#327)</li>
+<li>Audio files are now read incrementally, improving the availability under load (#294)</li>
+<li>A new output port for active voices has been added in the LV2 plugin (#321)</li>
+<li>Added support for effect types <code>reverb</code>, <code>disto</code>, <code>gate</code> and <code>comp</code></li>
+<li>The voice stealing is now configurable using <code>hint_stealing</code>, with possible values as <code>first</code>, <code>oldest</code> (default), and <code>envelope_and_age</code>. The latter is the more CPU-consuming version which requires to follow the envelope of each voice to kill low-volume ones preferably. Note that the voice stealing continue to kill all voices started on the same event by default (i.e. all layers of the same note). (#344 #384 #353)</li>
+<li><code>sfizz</code> now internally uses a modulation matrix to link all modulation sources (CC, LFOs, and EGs) and targets (#335 #351 #386)</li>
+<li>Added support for <code>off_time</code> and complete support for <code>off_mode</code>. The voice stealing logic was improved to take into account <code>polyphony</code>, <code>note_polyphony</code> and <code>group_polyphony</code> properly (#349 #352 #393 #413 #414 #467). Note that this support is also available for the engine polyphony. In this case, some additional voice will take over for the release duration (#477).</li>
+<li>The wavetable quality has been improved (#347)</li>
+<li>Support for <code>offset_cc</code> (#385)</li>
+<li><code>sfizz_render</code> now supports a <code>--quality</code> switch, which acts like the <code>sample_quality=</code> opcode (#408)</li>
+<li><code>pitch_keycenter=sample</code> is now taken into account (#362)</li>
+<li>Support <code>oscillator_detunecc</code> (#434)</li>
+<li>Support basic FM synthesis for oscillator regions (#436)</li>
+<li>CC 7, 10 and 11 are now linked by default to pan, volume and expression (#475)</li>
+<li>Support <code>hint_ram_loading</code> for loading the whole samples in RAM (#353)</li>
+<li>Support for <code>loop_crossfade</code> (#464)</li>
+<li>All phase-related opcodes in sfizz now use the 0-&gt;1 convention, as does ARIA/Sforzando, instead of the 0-&gt;360 convention (#499)</li>
+</ul>
+<p>Issues:</p>
+<ul>
+<li>Loading probable wavetable files, or wav files containing wavetable metadata now sets <code>oscillator=on</code> on the region (#431)</li>
+<li>The default <code>sample_quality</code> was put back to 1 for live playing and 2 for freewheeling (#405)</li>
+<li>Fix an unwanted copy in the realtime thread (#334)</li>
+<li>Improve the filter shortcut path (#336)</li>
+<li>Fix the default <code>ampeg_attack</code> and <code>ampeg_release</code> to avoid clicks (#437)</li>
+<li>Corrected a race condition in freewheeling mode (#500)</li>
+<li>Fixed a potential non-realtime operation in the realtime thread (#498)</li>
+<li>Fix a bug when using a larger internal oversampling for regions with an <code>offset</code> value (#469)</li>
+<li>Fix an issue when loops occured more than once in a block (#462)</li>
+<li>Increase the range of the clamping on amplitude (#468) and pitch (#474)</li>
+<li>Fix CC modulations with their source depth set to 0 (#475)</li>
+<li>Fix an overshoot for crazily large cutoff values (#478); cutoffs are now clamped</li>
+<li>Improve the file loading logic to keep files in memory for a short while in case they get reused (#425)</li>
+<li>Fix the MIDNAM output for the case where extended CCs are used (#420)</li>
+<li>Fixed a bug where release voices where not ignored on self-mask search (#348)</li>
+<li>Improved the release logic in many cases (#324 #414 #413)</li>
+<li>Set the level of the <code>*noise</code> generator to match ARIA's (#429)</li>
+<li>Support for <code>atom:Blank</code> atoms in the LV2 plugin (#363)</li>
+<li>Fixed <code>amp_veltrack</code> behavior (#371)</li>
+<li>Fix the ADSRH envelope release rate (#376)</li>
+<li>Fixed an error for files where the loop spans the entire file (#378)</li>
+<li>Fixed <code>sustain_cc</code> behavior (#377)</li>
+<li>Match the default volumes with ARIA (#381)</li>
+<li>Properly set the <code>loop_mode</code> for release regions (#379)</li>
+<li>Regions with <code>end=0</code> are now properly disabled (#380)</li>
+<li>Fix <code>fil_random</code> to be bipolar (#452)</li>
+<li>The <code>sequence</code> order now properly starts at 1 (#451)</li>
+<li>Fix an issue on Flush to Zero on some ARM platforms (#455)</li>
+<li>Fix <code>pitch_veltrack</code> (#461)</li>
+<li>Opcode values now properly stop at the <code>&lt;</code> character (#439)</li>
+<li>Fix various build errors and issues on all platforms (#345 #401 #400 #399 #417 #447 #449 #443 #453 #456 #459 #471 #484 #487 #488 #491)</li>
+<li>The file dialog initial directory is now the root of the current loaded file (#428)</li>
+<li>Existing and known CC values are now correctly taken into account for modulations (#421)</li>
+<li>Fix various performance regressions and improved performance especially on ARM builds (#410 #412 #415 #426)</li>
+</ul>
+<p>API changes:</p>
+<ul>
+<li>Added API support for setting the playback state, time position and signature (#354)</li>
+<li>The API documentation on the sfizz's website has been streamlined alot !</li>
+</ul>
+<p>See: <a href="https://github.com/sfztools/sfizz/releases/tag/0.5.0">GitHub release page</a></p>
+<h2 id="download-links">Download links:</h2>
+<ul>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/0.5.0/sfizz-0.5.0-linux-amd64.tar.gz">sfizz-0.5.0-linux-amd64.tar.gz</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/0.5.0/sfizz-0.5.0-linux-arm64.tar.gz">sfizz-0.5.0-linux-arm64.tar.gz</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/0.5.0/sfizz-0.5.0-mingw32.tar.gz">sfizz-0.5.0-mingw32.tar.gz</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/0.5.0/sfizz-0.5.0-mingw64.tar.gz">sfizz-0.5.0-mingw64.tar.gz</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/0.5.0/sfizz-0.5.0-moddevices.tar.gz">sfizz-0.5.0-moddevices.tar.gz</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/0.5.0/sfizz-0.5.0-osx-amd64.tar.gz">sfizz-0.5.0-osx-amd64.tar.gz</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/0.5.0/sfizz-0.5.0-src.tar.gz">sfizz-0.5.0-src.tar.gz</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/0.5.0/sfizz-0.5.0-x64-msvc-setup.exe">sfizz-0.5.0-x64-msvc-setup.exe</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/0.5.0/sfizz-0.5.0-x86-msvc-setup.exe">sfizz-0.5.0-x86-msvc-setup.exe</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/0.5.0/sfizz-lib-0.5.0-x64-msvc.zip">sfizz-lib-0.5.0-x64-msvc.zip</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/0.5.0/sfizz-lib-0.5.0-x86-msvc.zip">sfizz-lib-0.5.0-x86-msvc.zip</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/0.5.0/sfizz-lv2-0.5.0-x64-msvc.zip">sfizz-lv2-0.5.0-x64-msvc.zip</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/0.5.0/sfizz-lv2-0.5.0-x86-msvc.zip">sfizz-lv2-0.5.0-x86-msvc.zip</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/0.5.0/sfizz-plugins-0.5.0-linux-amd64.tar.gz">sfizz-plugins-0.5.0-linux-amd64.tar.gz</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/0.5.0/sfizz-plugins-0.5.0-linux-arm64.tar.gz">sfizz-plugins-0.5.0-linux-arm64.tar.gz</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/0.5.0/sfizz-vst3-0.5.0-x64-msvc.zip">sfizz-vst3-0.5.0-x64-msvc.zip</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/0.5.0/sfizz-vst3-0.5.0-x86-msvc.zip">sfizz-vst3-0.5.0-x86-msvc.zip</a></li>
+</ul>
+					</article>
+				</div>
+				<div class="col-md-3">
+					<aside>
+						
+					</aside>
+				</div>
+			</div>			<hr>
+			<footer>
+				<p style="text-align:left">Copyright &copy; 2019-2023
+					redtide</p>
+			</footer>
+		</div>		<script src="../../../assets/js/scripts.min.js"></script>		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/highlight.min.js">
+		</script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/languages/cpp.min.js">
+		</script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/gh/sfz/highlight.js@master/dist/sfz.min.js">
+		</script>
+		<script>hljs.highlightAll();</script>
+		<script>
+			anchors.options.placement = 'left';
+			anchors.add();
+		</script>
+		<script>
+			var base_url	= "../../..",
+					shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+		</script>
+		<script src="../../../assets/js/base.js" defer></script>
+		<!-- Search Dialog -->
+<div
+	class="modal"
+	id="mkdocs_search_modal"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="searchModalLabel"
+	aria-hidden="true"
+>
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title"
+						id="searchModalLabel">Search</h4>
+				<button
+					type="button"
+					class="btn-close"
+					data-bs-dismiss="modal"
+					aria-label="Close"
+				>
+				</button>
+			</div>
+			<div class="modal-body">
+				<p>From here you can search these documents. Enter your search terms below.</p>
+				<form>
+					<div class="form-group">
+						<input
+							type="search"
+							class="form-control"
+							placeholder="Search..."
+							id="mkdocs-search-query"
+							title="Type search term here"
+						>
+					</div>
+				</form>
+				<div id="mkdocs-search-results"
+						data-no-results-text="No results found">
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div><!-- Keyboard Dialog -->
+				<div
+						class="modal"
+						id="mkdocs_keyboard_modal"
+						tabindex="-1"
+						role="dialog"
+						aria-labelledby="keyboardModalLabel"
+						aria-hidden="true"
+				>
+						<div class="modal-dialog">
+								<div class="modal-content">
+										<div class="modal-header">
+												<h4 class="modal-title"
+														id="keyboardModalLabel">Keyboard Shortcuts</h4>
+												<button
+														type="button"
+														class="close"
+														data-dismiss="modal"
+												>
+														<span aria-hidden="true">&times;</span>
+														<span class="visually-hidden">Close</span>
+												</button>
+										</div>
+										<div class="modal-body">
+										<table class="table">
+												<thead>
+												<tr>
+														<th style="width: 20%;">Keys</th>
+														<th>Action</th>
+												</tr>
+												</thead>
+												<tbody>
+												<tr>
+														<td class="help shortcut"><kbd>?</kbd></td>
+														<td>Open this help</td>
+												</tr>
+												<tr>
+														<td class="next shortcut"><kbd>n</kbd></td>
+														<td>Next page</td>
+												</tr>
+												<tr>
+														<td class="prev shortcut"><kbd>p</kbd></td>
+														<td>Previous page</td>
+												</tr>
+												<tr>
+														<td class="search shortcut"><kbd>s</kbd></td>
+														<td>Search</td>
+												</tr>
+												</tbody>
+										</table>
+										</div>
+										<div class="modal-footer">
+										</div>
+								</div>
+						</div>
+				</div>
+	</body>
+</html>

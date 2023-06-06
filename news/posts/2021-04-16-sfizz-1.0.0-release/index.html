@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html
+	lang="en"
+	data-bs-theme="auto"
+>
+	<head>		<meta charset="utf-8">
+
+		<title>
+		
+		sfizz 1.0.0 release -
+		
+		Test
+		</title>
+
+		
+		<meta name="author" content="redtide">
+		
+		<meta name="web-author" content="redtide">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<script src="../../../assets/js/color-modes.js"></script>
+
+		
+		<link rel="shortcut icon" href="../../../assets/ico/favicon.ico">
+		<!-- Stylesheets -->
+		<link href="../../../assets/css/style.min.css" rel="stylesheet" media="screen">		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/github.min.css"
+			disabled="disabled"
+			id="hljs_light"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/github-dark.min.css"
+			disabled="disabled"
+			id="hljs_dark"
+		/>
+	</head>
+	<body>
+		<button onclick="topFunction()" id="scrollButton" title="Go to top">Top</button>
+		<div class="container">			<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+				<symbol id="sun-fill" viewBox="0 0 16 16">
+					<path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+				</symbol>
+				<symbol id="moon-stars-fill" viewBox="0 0 16 16">
+					<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+					<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+				</symbol>
+				<symbol id="circle-half" viewBox="0 0 16 16">
+					<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+				</symbol>
+				<symbol id="check2" viewBox="0 0 16 16">
+					<path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+				</symbol>
+			</svg>
+
+			<nav
+				class="navbar navbar-expand-lg bg-dark text-bg-dark"
+				data-bs-theme="dark"
+			>
+				<div class="container">
+
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarContent"
+						aria-controls="navbarContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<a
+						class="navbar-brand"
+						href="../../.."
+						>
+							<img
+								src="../../../assets/ico/favicon.ico"
+								width="30" height="30" class="d-inline-block align-top" alt=""
+							>
+						Test
+					</a>
+
+					<div class="collapse navbar-collapse" id="navbarContent">
+						<ul class="navbar-nav me-auto mt-2 mt-lg-0">
+							<li>
+								<a class="nav-link" href="../..">News</a>
+							</li>
+						</ul>
+						<ul class="navbar-nav">
+							<li class="nav-item">
+									<a
+										href="#"
+										class="nav-link"
+										data-bs-toggle="modal"
+										data-bs-target="#mkdocs_search_modal">
+											<i class="fa fa-search"></i> Search
+									</a>
+							</li>
+							<li class="nav-item dropdown">
+								<button
+									class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center"
+									id="bd-theme"
+									type="button"
+									aria-expanded="false"
+									data-bs-toggle="dropdown"
+									data-bs-display="static"
+									aria-label="Toggle theme (auto)">
+									<svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
+									<span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+								</button>
+								<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+									<li>
+										<button
+											type="button"
+											class="dropdown-item d-flex align-items-center"
+											data-bs-theme-value="light"
+											aria-pressed="false">
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#sun-fill"></use></svg>
+											Light
+											<svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+										</button>
+									</li>
+									<li>
+										<button
+											type="button"
+											class="dropdown-item d-flex align-items-center"
+											data-bs-theme-value="dark"
+											aria-pressed="false">
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#moon-stars-fill"></use></svg>
+											Dark
+											<svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+										</button>
+									</li>
+									<li>
+										<button
+											type="button"
+											class="dropdown-item d-flex align-items-center active"
+											data-bs-theme-value="auto"
+											aria-pressed="true">
+											<svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half"></use></svg>
+											Auto
+											<svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+										</button>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="row mt-4" id="content">
+				<div class="col-md-9">
+					<article><h1>sfizz 1.0.0 release</h1><p>Published by github-actions[bot] at 2021-04-16 15:31:49</p>
+<hr />
+<p>We would like to thank to our contributors at https://opencollective.com/sfztools, as well as everyone who is regularly testing and pushing sfizz to the limits!  Your support to this project in any form is much appreciated.</p>
+<p>You can download builds catered for your Linux distribution over at <a href="https://software.opensuse.org//download.html?project=home%3Asfztools%3Asfizz&amp;package=sfizz">OBS</a>. The Mac, Windows and MOD packages are below in the release assets, as well as the source packages.</p>
+<p>Headlines:</p>
+<ul>
+<li>SFZ v1 is virtually supported except for a handful of opcodes ! Please check
+  https://sfz.tools/sfizz/development/status/ for the up-to-date status of opcode support.</li>
+<li>It is now possible to build sfizz without relying on libsndfile, using a set of libraries. This is now the
+  default build mode. Building with libsndfile can be enabled at configure time.</li>
+<li>The library and plugins can now load DecentSampler files, and could accomodate other formats.</li>
+<li>CCs, keyswitch range, key ranges and active keyswitch are now displayed in the editor for all plugins.
+  There has been a lot of UI work to make it more practical to use.</li>
+<li>There is an OSC interface in the library, which allows to have introspection into the currently
+  loaded file, the state of CCs/keyswitches, and also set some parameters for loaded regions.</li>
+</ul>
+<p>API/ABI changes for the library:</p>
+<ul>
+<li>The ABI is broken, leading to a major version change.</li>
+<li>Thread-safety now has to be handled externally. The API has been updated to provide a concurrency spec.</li>
+<li>The current version of the internal oversampling factor was too unstable and has been disabled for the time
+being. The API and plugin parameters are staying for compatibility. A more robust implementation should come soon.</li>
+<li>Added documentation in the API calls to make clear that sample-accurate triggering of voice requires
+  messages to be sent in order. The VST plugin in particular did not respect this and has been updated.</li>
+<li>A new <code>bpmTempo</code> method has been added to pass tempo as beats-per-minute rather than seconds per beat.
+  The previous version is deprecated.</li>
+<li>There are new HD (float) versions of API calls for note and CC events.</li>
+<li><code>aftertouch</code> is renamed as <code>channel_aftertouch</code> (for C) and <code>channelAftertouch</code> (for C++) throughout the API
+  to be more consistent with <code>polyAftertouch</code>.</li>
+</ul>
+<p>UI:</p>
+<ul>
+<li>UI improvements and tweaks, adding themability in particular (#826 #824 #822 #821 #819 #818 #816 #812 #799 #743 #691 #674 #673 #672 #670 #662 #661 #656)</li>
+<li>Added an info panel in the plugin UI (#793 #792 #791 #789 #788 #787 #782 #779 #773)</li>
+<li>Improve font handling (#669 #622)</li>
+<li>Improve file handling in the UI (#645 #659 #658) and enable the use of a "default user directory" or environment variable.
+  This also allows the plugin to "find" missing sfz files in a different environment (#644 #581 #572 #532)</li>
+<li>Support DecentSampler and a generic importer for other formats (#725 #715 #680)</li>
+<li>Show the current keyswitch on the editor and the virtual keybnoard (#665 #657)</li>
+<li>Added a button to reset the scala file to default (#660)</li>
+<li>The plugins now display an image through the <code>image</code> opcode (#770)</li>
+</ul>
+<p>Plugins:</p>
+<ul>
+<li>Remove automation from un-automatable parameters in the VST plugin (#814)</li>
+<li>Order VST events (#810 #803)</li>
+<li>Added the option to build a VST2 version of sfizz if you have the SDK available (#708)</li>
+<li>The C++ standard is set to 14 if you build the UI on LV2, or if you build the VST version. This will likely
+  increase to 17 shortly due to the dependency on VSTGUI. The ui-less LV2 plugin and the library remain C++11
+  compatible. Note that windows builds already use C++17 on all targets. (#795)</li>
+<li>Fix corruptions and crashes that happened in the LV2 plugin (#794 #668 #557)</li>
+<li>The internal controllers of sfizz are now presented as parameters in the LV2 plugin. Experimental midi binding
+  is also active on them. By default the "direct" midi input is disabled and you need to map to the parameters.
+  A compile-time option is available to re-enable the midi input. (#776)</li>
+<li>Fix crashes in the VST plugin (#709 #702 #681 #625)</li>
+<li>Enable checking if file changed even when the transport is not running (#712 #689)</li>
+<li>The Mac builds are now signed (#550 #552)</li>
+<li>Update VST to 3.7.2 (#798)</li>
+</ul>
+<p>Library:</p>
+<ul>
+<li>Small files with only zeroes are considered as <code>*silence</code> (#831)</li>
+<li>The library uses an Hermite interpolation by default (#828 #829)</li>
+<li>Fix an error where sample indices could wrap for massive pitch modulations (#825 #751)</li>
+<li>Add high-definition versions of the API calls (#820)</li>
+<li>Corrected a bug where regions with long release envelopes would not stop on sample ending (#811)</li>
+<li>Support polyphonic aftertouch events, triggers and targets (#809 #764)</li>
+<li>Support monophonic aftertouch events, triggers and targets (#765 #630 )</li>
+<li>Corrected a regression where sfizz would stop loading the SFZ file if some sample files cannot be loaded (#806)</li>
+<li>Update abseil and ghc::filesystem (#780), the tunings library from Surge (#785), catch2 (#711)</li>
+<li>It is now possible to change some parameters of the regions after loading the file through the OSC interface (#761)</li>
+<li>Improve the choking logic to match the spec and other implementations (#778)</li>
+<li>Added modulation targets for amplitude, pan, width, position, pitch and volume (#760)</li>
+<li>Support CC modifiers for <code>end</code>, <code>loop_start</code> and <code>loop_end</code> (#752)</li>
+<li>Support CC modifiers for LFO targets (#753)</li>
+<li>Support SFZ v1 extended CCs (#747)</li>
+<li>Implement the sostenuto logic (#739)</li>
+<li>Refactored opcode reading and storing (#748 #727 #721 #722 #720 #700 #559)</li>
+<li>Fix the parser to support sharp (#) symbols in file names (#746)</li>
+<li>Improved the ADSR transitions from decay to sustain, and from release to 0 (#734 #373)</li>
+<li>Reset the smoothers if the playhead moved (#731 #710 #382)</li>
+<li>Corrected a bug where the first sample was ignored on playback (#732 #394)</li>
+<li>Added CC modulation for <code>depth</code> targets (#730)</li>
+<li>If the sustain level is low enough the envelope is set to free-run (#723, #676)</li>
+<li>Fix loop crossfades when the loop starts early in the sample (#718)</li>
+<li>Fix random generators to match ARIA's behavior (#719)</li>
+<li>Fix corruption appearing in some sample libraries (#717 #695)</li>
+<li>Smoothers are now linear (#713 #714 #703)</li>
+<li>Filter/EQ parameters are clamped even with modulation (#701 #699)</li>
+<li>Implement v1 LFOs (#693)</li>
+<li>Support <code>count</code> and <code>loop_count</code> (#654)</li>
+<li>Fix a bug where the sample rate was not propagated properly to the flex EGs (#683)</li>
+<li>Delay envelope start by the voice delay (#655 #432)</li>
+<li>Support <code>delay_oncc</code> (#653)</li>
+<li>Support <code>sw_vel</code> (#650)</li>
+<li>Fix <code>note_polyphony</code> choking (#634 #529)</li>
+<li>Respect the <code>end</code> opcode (#618)</li>
+<li>Fix allocations that may happen on the RT thread (#621)</li>
+<li>Fix the polyphony manager when the engine polyphony is changed after a file is loaded (#619)</li>
+<li>Avoid reloading invalid files (#614)</li>
+<li>Allow parsing of some badly formed files files (#600)</li>
+<li>Match ARIA's LFOs (#613)</li>
+<li>Added windowed sinc interpolation for <code>sample_quality</code> from 3 to 10 (#609)</li>
+<li>Improve the Hermite interpolation (#597)</li>
+<li>Update AtomicQueue to correct a bug (#583)</li>
+<li>Support <code>lfoN_beats</code> (#553)</li>
+<li>Add region and voice introspection to the OSC interface (#555)</li>
+<li>Enable fast-math on MSVC (#567)</li>
+<li>Fix crashes when building with libsndfile (#542 #543)</li>
+<li>Properly pad and align the wav files upon reading (#538)</li>
+<li>Add an alternative to libsndfile (#482 #534 #535 #536)</li>
+<li>Handle gracefully having a different <code>sw_default</code> in a region (#531)</li>
+<li>Support disjoint keyswitch ranges, as well as <code>sw_lolast</code> and <code>sw_hilast</code> (#526)</li>
+</ul>
+<p>See: <a href="https://github.com/sfztools/sfizz/releases/tag/1.0.0">GitHub release page</a></p>
+<h2 id="download-links">Download links:</h2>
+<ul>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/1.0.0/sfizz-1.0.0-macos.dmg">sfizz-1.0.0-macos.dmg</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/1.0.0/sfizz-1.0.0-mingw32.tar.gz">sfizz-1.0.0-mingw32.tar.gz</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/1.0.0/sfizz-1.0.0-mingw64.tar.gz">sfizz-1.0.0-mingw64.tar.gz</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/1.0.0/sfizz-1.0.0-moddevices.tar.gz">sfizz-1.0.0-moddevices.tar.gz</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/1.0.0/sfizz-1.0.0-win32.exe">sfizz-1.0.0-win32.exe</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/1.0.0/sfizz-1.0.0-win64.exe">sfizz-1.0.0-win64.exe</a></li>
+<li><a href="https://github.com/sfztools/sfizz/releases/download/1.0.0/sfizz-1.0.0.tar.gz">sfizz-1.0.0.tar.gz</a></li>
+</ul>
+					</article>
+				</div>
+				<div class="col-md-3">
+					<aside>
+						
+					</aside>
+				</div>
+			</div>			<hr>
+			<footer>
+				<p style="text-align:left">Copyright &copy; 2019-2023
+					redtide</p>
+			</footer>
+		</div>		<script src="../../../assets/js/scripts.min.js"></script>		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/highlight.min.js">
+		</script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/languages/cpp.min.js">
+		</script>
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/gh/sfz/highlight.js@master/dist/sfz.min.js">
+		</script>
+		<script>hljs.highlightAll();</script>
+		<script>
+			anchors.options.placement = 'left';
+			anchors.add();
+		</script>
+		<script>
+			var base_url	= "../../..",
+					shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+		</script>
+		<script src="../../../assets/js/base.js" defer></script>
+		<!-- Search Dialog -->
+<div
+	class="modal"
+	id="mkdocs_search_modal"
+	tabindex="-1"
+	role="dialog"
+	aria-labelledby="searchModalLabel"
+	aria-hidden="true"
+>
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title"
+						id="searchModalLabel">Search</h4>
+				<button
+					type="button"
+					class="btn-close"
+					data-bs-dismiss="modal"
+					aria-label="Close"
+				>
+				</button>
+			</div>
+			<div class="modal-body">
+				<p>From here you can search these documents. Enter your search terms below.</p>
+				<form>
+					<div class="form-group">
+						<input
+							type="search"
+							class="form-control"
+							placeholder="Search..."
+							id="mkdocs-search-query"
+							title="Type search term here"
+						>
+					</div>
+				</form>
+				<div id="mkdocs-search-results"
+						data-no-results-text="No results found">
+				</div>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+</div><!-- Keyboard Dialog -->
+				<div
+						class="modal"
+						id="mkdocs_keyboard_modal"
+						tabindex="-1"
+						role="dialog"
+						aria-labelledby="keyboardModalLabel"
+						aria-hidden="true"
+				>
+						<div class="modal-dialog">
+								<div class="modal-content">
+										<div class="modal-header">
+												<h4 class="modal-title"
+														id="keyboardModalLabel">Keyboard Shortcuts</h4>
+												<button
+														type="button"
+														class="close"
+														data-dismiss="modal"
+												>
+														<span aria-hidden="true">&times;</span>
+														<span class="visually-hidden">Close</span>
+												</button>
+										</div>
+										<div class="modal-body">
+										<table class="table">
+												<thead>
+												<tr>
+														<th style="width: 20%;">Keys</th>
+														<th>Action</th>
+												</tr>
+												</thead>
+												<tbody>
+												<tr>
+														<td class="help shortcut"><kbd>?</kbd></td>
+														<td>Open this help</td>
+												</tr>
+												<tr>
+														<td class="next shortcut"><kbd>n</kbd></td>
+														<td>Next page</td>
+												</tr>
+												<tr>
+														<td class="prev shortcut"><kbd>p</kbd></td>
+														<td>Previous page</td>
+												</tr>
+												<tr>
+														<td class="search shortcut"><kbd>s</kbd></td>
+														<td>Search</td>
+												</tr>
+												</tbody>
+										</table>
+										</div>
+										<div class="modal-footer">
+										</div>
+								</div>
+						</div>
+				</div>
+	</body>
+</html>
